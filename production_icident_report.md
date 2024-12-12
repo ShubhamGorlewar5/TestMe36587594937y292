@@ -61,7 +61,7 @@ The root cause was identified as hardcoded behavior in the application, where se
 - **Temporary Workaround:**
   
      **Solution 1:** <br>
-     **Started the application with a different app name**: The container was redeployed with a modified configuration or app name to temporarily bypass the issue related to the environment variable as it could start with 'unknown'
+     **Started the application with a different app name**: The container was redeployed with a modified configuration or app name to temporarily bypass the issue related to the environment variable or we can remove the enviroment variable help to start with  'unknown' as per code intiaizaltion when enviroment variable is not set.
   You can view the related pull request [here](https://github.com/username/repository/pull/PR_number).
 
      **Solution 2:** <br>
