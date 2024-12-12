@@ -31,7 +31,7 @@ const handler = (req: Request): Response => {
 ```
 
 ## Incident Summary
- The "app3" container fails intermittently with a 503 Service Unavailable error when an environment variable is set to APP_NAME=app3. This failure results in some production machines becoming unresponsive, which in turn affects the customer experience and leads to service disruptions. The issue was caused by hardcoded behavior in the application code, where the environment variable triggers a failure.
+ The "app3" container fails intermittently with a 503 Service Unavailable error when an environment variable is set to APP_NAME=app3 and after evey 3rd request its sending 503 resulting into every few requests, resulting in failed connections to our application. This failure results in some production machines becoming unresponsive, which in turn affects the customer experience and leads to service disruptions. The issue was caused by hardcoded behavior in the application code, where the environment variable triggers a failure.
  
 ## Impact Assessment
 - **Affected Services:** "app3" container and its associated services.
