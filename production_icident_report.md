@@ -63,9 +63,9 @@ The root cause was identified as hardcoded behavior in the application, where se
      **Solution 1:** <br>
      **Started the application with a different app name or Remove enviroment variable**: The container was redeployed with a modified configuration for app name  = App_3 to temporarily bypass the issue related to the environment variable or we can remove the enviroment variable which help to start with  'unknown' as per code support this intiaizaltion [when enviroment variable is not set].
   
-  You can view the related pull request [here]
-      Start with differnt app name :  (https://github.com/username/repository/pull/PR_number).
-      Remove enviroment variable: (https://github.com/username/repository/pull/PR_number).
+  You can view the related pull request [here] <br>
+      **Start with differnt app name :  (https://github.com/username/repository/pull/PR_number). <br>
+      **Remove enviroment variable: (https://github.com/username/repository/pull/PR_number).
   
      **Solution 2:** <br>
      **Removed all affected containers (`app3` replicas) from the HAProxy load balancer**: Since the application is running with three replicas same docker file, all containers using the affected enviroment variable [app3] were temporarily removed from the load balancer to prevent them from receiving traffic. This maintained high availability by ensuring that only healthy containers continued serving requests.
