@@ -1,5 +1,5 @@
 ## Root cause analysis
-The issue appears to stem from intermittent failures in the "app3" container, which is part of the application running behind HAProxy.
+The issue seems to be caused by occasional failures in the "app3" container., which is part of the application running behind HAProxy.
 Initial investigations indicate that the failure may be related to resource exhaustion, container configuration, or issues with how HAProxy is handling container health checks and load balancing.
 
 The issue was traced to a hardcoded logic in the "app3" container's application code that triggers a 503 Service Unavailable error when a specific environment variable is set. Upon setting the environment variable for "app3," the application fails and returns a 503 HTTP status code. This issue led to the intermittent failure observed in the HAProxy status report, where the "app3" container would fail after three requests and then return to a healthy state.
