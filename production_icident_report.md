@@ -44,7 +44,7 @@ const handler = (req: Request): Response => {
 The issue was first identified when the HAProxy status page indicated that the "app3" container was marked as unhealthy after returning multiple 503 errors following every third request. The failure pattern was intermittent, which made it challenging to immediately pinpoint the root cause.
 
 ### Escalation
-After further investigation, the issue was escalated to the development  team once it was found that the problem was related to the environment variable being set, which caused the application to return 503 errors.
+After further investigation, the issue was escalated to the development  team once it was found that the problem was related to the environment variable on the application side, which caused the application to return 503 errors.
 
 ### Mitigation
 A temporary workaround was implemented by unsetting the problematic environment variable in the container, which restored normal functionality. The application returned to a healthy state, and production machines were no longer unresponsive.
