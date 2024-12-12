@@ -13,9 +13,9 @@
 ### Resolution
 ###  Root Cause Analysis
 
-###  Actions Taken
+##  Actions Taken
 
-###  Follow-Up Actions
+##  Follow-Up Actions
 
-### Lessons Learned
+## Lessons Learned
 
