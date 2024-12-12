@@ -58,7 +58,7 @@ The root cause was identified as hardcoded behavior in the application, where se
 - **Dockerfile Inspection:** Reviewed the Dockerfile to investigate further.
 - The application code was updated to handle the environment variable more robustly, ensuring it does not result in a 503 error.
 - HAProxy configurations were checked and validated to ensure proper health check intervals and retry behavior.
-- **Temporary Workaround:**
+- **Temporary workaround will be implemented until a bug fix is raised:**
   
      **Solution 1:** <br>
      **Started the application with a different app name or Remove enviroment variable for app3**: The container was redeployed with a modified configuration for app name  = app_3 to temporarily bypass the issue related to the environment variable or we can remove the enviroment variable which help to start with  'unknown' as per code support this intiaizaltion [when enviroment variable is not set].
